@@ -39,5 +39,17 @@
 
    - Configuring uWSGI
       - nano ~/bertmodel/bertmodel.ini 
+      - Content to add in ini file.<br><br>
+         [uwsgi]<br>
+         module = wsgi:app<br>
+         <br>
+         master = true <br>
+         processes = 5<br>
+         <br>
+         socket = bertmodel.sock <br>
+         chmod-socket = 660 <br>
+         vacuum = true<br>
+         <br>
+         die-on-term = true<br>
         
 
